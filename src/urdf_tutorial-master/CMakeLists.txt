@@ -202,5 +202,9 @@ target_link_libraries(urdf_tutorial_a ${catkin_LIBRARIES})
 add_executable(urdf_tutorial_b src/urdf_tutorial_b.cpp)
 target_link_libraries(urdf_tutorial_b ${catkin_LIBRARIES})
 
+add_executable(urdf_tutorial_seven src/urdf_tutorial_seven.cpp)
+target_link_libraries(urdf_tutorial_seven ${catkin_LIBRARIES})
 
+add_executable(seven_dof_arm src/seven_dof_arm.cpp)
+target_link_libraries(seven_dof_arm ${catkin_LIBRARIES})
 

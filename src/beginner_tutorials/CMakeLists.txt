@@ -64,6 +64,7 @@ find_package(catkin REQUIRED COMPONENTS
 add_service_files(
   FILES
   AddTwoInts.srv
+  distancia1.srv
 )
 
 
@@ -267,5 +268,14 @@ target_link_libraries(safe_zone_vel_publisher ${catkin_LIBRARIES})
 add_executable(smart_turtle src/smart_turtle.cpp)
 target_link_libraries(smart_turtle ${catkin_LIBRARIES})
 
+add_executable(move_second_turtle src/move_second_turtle.cpp)
+target_link_libraries(move_second_turtle ${catkin_LIBRARIES})
 
 
+add_executable(distance_checker_plus src/distance_checker_plus.cpp)
+target_link_libraries(distance_checker_plus ${catkin_LIBRARIES})
+add_dependencies(distance_checker_plus beginner_tutorials_gencpp)
+
+add_executable(distance_observer src/distance_observer.cpp)
+target_link_libraries(distance_observer ${catkin_LIBRARIES})
+add_dependencies(distance_observer beginner_tutorials_gencpp)

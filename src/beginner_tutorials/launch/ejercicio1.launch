@@ -6,13 +6,21 @@
     respawn="true"
   />
 
-
   <node
     pkg="turtlesim"
     type="turtle_teleop_key"
     name="teleop_key"
     required="true"
     launch-prefix="xterm -e"
-    
+
   />
+   <node
+    pkg="beginner_tutorials"
+    type="move_second_turtle"
+    name="move_second_turtle"
+    required="true"
+    launch-prefix="xterm -e"
+  />
+
 </launch>
+

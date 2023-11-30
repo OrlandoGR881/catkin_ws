@@ -98,5 +98,40 @@
 
   </link>
 
+<link name="gripper_finger_link1">
+    <visual>
+      <origin xyz="0.04 -0.03 0"/>
+      <geometry>
+        <box size="0.08 0.01 0.01"/>
+      </geometry>
+      <material>
+    </visual>
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="1.0" ixy="0.0" ixz="0.0" iyy="0.5" iyz="0.0" izz="1.0"/>
+    </inertial>
+  </link>
+  <gazebo reference="l_gripper_aft_link">
+    <material>
+  </gazebo>
+
+
+  <!-- Joint between Wrist roll and finger 2 -->
+  <joint name="finger_joint2" type="prismatic">
+    <parent link="tilt_link"/>
+    <child link="gripper_finger_link2"/>
+    <origin xyz="0.0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit effort="1" lower="-0.03" upper="0" velocity="1.0"/>
+    <!--    <mimic joint="gripper_finger_joint" multiplier="-1.0" offset="0.0" /> -->
+    <dynamics damping="50" friction="1"/>
+
+    
+  </joint>
+
+
+
+
+
 
 </robot>
